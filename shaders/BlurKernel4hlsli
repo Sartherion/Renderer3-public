@@ -1,0 +1,13 @@
+#pragma once
+const static int blurRadius = 4;
+const static int kernelSize = blurRadius * 2 + 1;
+
+static const float offsets[kernelSize] =
+{
+    -4.0f, -3.0f, -2.0f, -1.0f, 0.0f, 1.0f, 2.0f, 3.0f, 4.0f
+};
+static const float weights[kernelSize] =
+{
+    0.01621622f, 0.05405405f, 0.12162162f, 0.19459459f, 0.22702703f,
+		0.19459459f, 0.12162162f, 0.05405405f, 0.01621622f
+};

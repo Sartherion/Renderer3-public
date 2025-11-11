@@ -1,0 +1,17 @@
+.vs/
+Renderer3/
+content/
+external/
+imgui.ini
+packages.config
+packages/
+!packages/WinPixEventRuntime.1.0.240308001/Include/WinPixEventRuntime/
+x64/
+/DawnCache
+/GPUCache
+/debug.log
+/pin.log
+/compileData.scor
+/compileData.scor.gbl
+/compileData.scor.t0000
+/include/Renderer3.pch
