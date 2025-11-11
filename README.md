@@ -1,5 +1,5 @@
 # Renderer3
-A toy real-time deferred renderer using Direct3D 12 and written in C++. The purpose of the project is learning about modern and classical rendering techniques. The renderer is fully bindless and all data is passed to shaders via 32-bit root constants representing either an index into the shader-visible descriptor heap or an offset into a global read-only buffer resource. The project takes advantage of more recent additions to Direct3D 12, such as enhanced barriers, inline ray tracing, and GPU upload heaps.
+A toy real-time deferred renderer using Direct3D 12 and written in C++. The purpose of the project is learning about modern and classic rendering techniques. The renderer is fully bindless and all data is passed to shaders via 32-bit root constants representing either an index into the shader-visible descriptor heap or an offset into a global read-only buffer resource. The project takes advantage of more recent additions to Direct3D 12, such as enhanced barriers, inline ray tracing, and GPU upload heaps.
 
 ## Features
 
