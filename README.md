@@ -5,7 +5,7 @@ A toy real-time deferred renderer using Direct3D 12 and written in C++. The purp
 
 ### Ray-Traced Indirect Diffuse Lighting 
 - per pixel indirect diffuse lighting with denoising based on self stabilizing recurrent blurs [[1, 2](#references)]
-     - Blur passes use a poisson disk kernel, which is projected back onto the scene for spatially-aware blurring.
+     - Blur passes use a Poisson disk kernel, which is projected back onto the scene for spatially-aware blurring.
      - The blur radius is larger for newly-visible regions of the image and smaller for regions which have already temporally accumulated samples.
      - The blurred result from the previous frames is fed back into the current frame.
      - Disoccluded regions receive special treatment in a history fix pass, employing a dynamically-generated mip chain.
@@ -32,7 +32,7 @@ A toy real-time deferred renderer using Direct3D 12 and written in C++. The purp
 *short video demonstration of the combined diffuse global-illumination solution*|
 
 ### Stochastic Screen-Space Reflections (SSSR) [[6](#references)]
-- screen-space tracing done in a hierarchical fashion [[7](#references)], relying on a mip chain generated from the current depth buffer (depth pyramide)
+- screen-space tracing done in a hierarchical fashion [[7](#references)], relying on a mip chain generated from the current depth buffer (depth pyramid)
 - spatial and temporal reuse of samples, which are obtained via importance sampling of visible normals [[10](#references)]
 
 real-time SSSR |  path-traced reference
@@ -46,9 +46,9 @@ real-time SSSR |  path-traced reference
   - R16G16B16A16_UNORM: RG = octahedrally-encoded normals, B = metalness, A = roughness
   - R16G16_FLOAT: RG = motion vectors for temporal reprojection
 - Clustering allows to have thousands of dynamic lights in the scene, as long as not too many lights overlap in the same cluster cell.
-- Clustering is performed in mulitple passes on the GPU, following [[8](#references)].
+- Clustering is performed in multiple passes on the GPU, following [[8](#references)].
 
-     original scene | cluster debug visualization 
+     original scene | cluster debug visualisation 
      :---:|:---:
      ![](https://github.com/Sartherion/Renderer3-Images/blob/main/clustered_shading.png) | ![](https://github.com/Sartherion/Renderer3-Images/blob/main/cluster_visualization.png)
   *scene with 2048 active unshadowed point lights* | *The view frustum gets divided into cells (8x8 pixel tiles and 64 depth slices), each of which gets its own linked list of lights employed for shading.*
