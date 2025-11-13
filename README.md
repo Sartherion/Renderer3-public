@@ -29,7 +29,7 @@ A toy real-time deferred renderer using Direct3D 12 and written in C++. The purp
 
 [![](https://img.youtube.com/vi/ZxIzYLs71RM/0.jpg)](https://www.youtube.com/watch?v=ZxIzYLs71RM)|
 :---:|
-*short video demonstration of combined diffuse global-illumination solution*|
+*short video demonstration of the combined diffuse global-illumination solution*|
 
 ### Stochastic Screen-Space Reflections (SSSR) [[6](#references)]
 - screen-space tracing done in a hierarchical fashion [[7](#references)], relying on a mip chain generated from the current depth buffer (depth pyramide)
